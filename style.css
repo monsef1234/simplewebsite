@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --btn: #fbe850;
+  --bg1: #0a0a0b;
+  --bg2: #2e3038;
+  --clr: #adadad;
+  --headerfont: "Prata", serif;
+  --bodyfont: "Inter", sans-serif;
+  --transition: 0.5s;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg1);
+  position: relative;
+  overflow-x: hidden;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  position: relative;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.btn-style {
+  background-color: var(--btn);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-family: var(--headerfont);
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+/* Start Header */
+header {
+  color: white;
+  height: 80px;
+  max-height: 100%;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+header .container .logo h2 {
+  text-transform: capitalize;
+}
+header .container .links {
+  transition: var(--transition);
+}
+header .container .links.toggle {
+  transform: translateX(0) !important;
+}
+header .container .links nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+header .container .links nav ul li a {
+  text-transform: capitalize;
+  color: var(--clr);
+  font-family: var(--bodyfont);
+  font-weight: 500;
+  font-size: 15px;
+  transition: var(--transition);
+}
+header .container .links nav ul li a:hover {
+  color: var(--btn);
+}
+
+header .container > img {
+  display: none;
+}
+/* End Header */
+/* Start Landing */
+.landing .container {
+  display: flex;
+  flex-direction: column;
+}
+.landing .container .about-us {
+  color: white;
+  width: 600px;
+  max-width: 100%;
+  line-height: 1.6;
+  /* text-align: justify; */
+  margin: 50px 0;
+}
+.landing .container .about-us h1 {
+  font-family: var(--headerfont);
+  font-size: 45px;
+}
+.landing .container .about-us p {
+  font-family: var(--bodyfont);
+  color: var(--clr);
+  font-size: 14px;
+  max-width: 550px;
+  text-align: justify;
+}
+.landing .container .logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.landing .container .logos img {
+  width: 100px;
+  display: block;
+  object-fit: cover;
+}
+.landing .container .services {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0;
+  color: white;
+  gap: 20px;
+}
+.landing .container .services .box {
+  width: 450px;
+}
+.landing .container .services .box img {
+  width: 100%;
+}
+.landing .container .services .box .head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.landing .container .services .head .box h2 {
+  font-family: var(--headerfont);
+  margin: 10px 0;
+}
+.landing .container .services .box .head i {
+  cursor: pointer;
+}
+.landing .container .services .box .info p {
+  font-family: var(--bodyfont);
+  color: var(--clr);
+  font-size: 15px;
+  line-height: 1.6;
+}
+/* End Landing */
+/* Start co-founder */
+.co-founder {
+  background-color: var(--bg2);
+  padding: 50px 0;
+}
+.co-founder .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--bodyfont);
+}
+.co-founder .container p {
+  line-height: 1.6;
+  color: var(--clr);
+  font-size: 15px;
+}
+.co-founder .container .box h2 {
+  font-family: var(--headerfont);
+  font-size: 30px;
+  color: white;
+  margin-bottom: 15px;
+}
+.co-founder .container .box {
+  /* min-width: 200px; */
+  width: 500px;
+  max-width: 100%;
+}
+/* End co-founder */
+/* Start interested */
+.interested {
+  margin: 50px 0;
+}
+.interested .container .box {
+  color: white;
+  width: 450px;
+  max-width: 100%;
+}
+.interested .container .box h2 {
+  font-family: var(--headerfont);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.interested .container .box p {
+  line-height: 1.6;
+  font-family: var(--bodyfont);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+/* End interested */
+/* Start footer */
+footer {
+  padding: 20px 0;
+  background-color: var(--bg2);
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+footer .container h3 a {
+  text-transform: capitalize;
+  font-family: var(--headerfont);
+}
+footer .container .social img {
+  cursor: pointer;
+}
+.popup {
+  transition: 1s ease-in-out;
+}
+/* End footer */
+/* Media */
+@media (max-width: 680px) {
+  header .container .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    background-color: var(--bg2);
+    z-index: 100;
+  }
+  header .container .links {
+    padding: 20px;
+  }
+  header .container .links nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .container .btn button {
+    display: none;
+  }
+  header .container > img {
+    display: block;
+    cursor: pointer;
+  }
+}
+@media (max-width: 990px) {
+  .landing .container .services {
+    justify-content: center;
+  }
+  .co-founder .container {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
